@@ -88,12 +88,13 @@
 <body>
     <div class="profile-card">
         <div class="profile-photo">
-            <img src="{{ asset('assets/img/miko.jpg') }}" alt="Deskripsi Gambar">
+            <img src="{{ asset('assets/img/GIK.jpg') }}" alt="Deskripsi Gambar">
         </div>
         <div class="profile-info">
             <p><strong>Nama:</strong> <?= $nama ?></p>
-            <p><strong>Kelas:</strong> <?= $kelas ?></p>
             <p><strong>NPM:</strong> <?= $npm ?></p>
+            <p><strong>Kelas:</strong> <?= $nama_kelas ?? 'Kelas tidak ditemukan' ?></p>
+
         </div>
     </div>
 </body>
