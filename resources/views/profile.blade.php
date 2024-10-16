@@ -90,11 +90,18 @@
         <div class="profile-photo">
             <img src="{{ asset('assets/img/GIK.jpg') }}" alt="Deskripsi Gambar">
         </div>
-        <div class="profile-info">
-            <p><strong>Nama:</strong> <?= $nama ?></p>
-            <p><strong>NPM:</strong> <?= $npm ?></p>
-            <p><strong>Kelas:</strong> <?= $nama_kelas ?? 'Kelas tidak ditemukan' ?></p>
-
+        
+        <div class="info">
+            <p class="label">Nama :</p>
+            <p class="value">{{ $user->nama }}</p>
+        </div>
+        <div class="info">
+            <p class="label">NPM :</p>
+            <p class="value">{{ $user->npm }}</p>
+        </div>
+        <div class="info">
+            <p class="label">Kelas :</p>
+            <p class="value">{{ $user->nama_kelas ?? 'Kelas Tidak Ditemukan' }}</p>
         </div>
     </div>
 </body>
