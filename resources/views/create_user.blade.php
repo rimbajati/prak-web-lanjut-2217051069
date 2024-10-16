@@ -18,7 +18,7 @@
             <div class="card-body">
                 <h3 class="text-center mb-4">Create User</h3>
 
-                <form action="{{ route('user.store') }}" method="POST">
+                <form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama:</label>
@@ -37,6 +37,11 @@
                             <option value="{{ $kelasItem->id }}">{{ $kelasItem->nama_kelas }}</option>
                             @endforeach
                         </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="foto" class="form-label">foto:</label>
+                        <input type="file" id="foto" name="foto" class="form-control" placeholder="Masukan Foto">
                     </div>
 
                     <button type="submit" class="btn btn-success w-100">Submit</button>

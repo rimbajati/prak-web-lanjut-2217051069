@@ -8,6 +8,7 @@
             <h3 class="text-center mb-4">List User</h3>
             <table class="table table-bordered table-striped">
                 <thead class="thead-dark">
+                <a href="{{ route('user.create') }}" class="btn btn-primary mb-3">Tambah Pengguna Baru</a>
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nama</th>
@@ -23,9 +24,7 @@
                         <td><?= $user['nama'] ?></td>
                         <td><?= $user['npm'] ?></td>
                         <td><?= $user['nama_kelas'] ?></td>
-                        <td>
-
-                        </td>
+                        <td><a href="{{ route('users.show', $user->id) }}"class="btn btn-warning mb-3">Detail</a></td>
                     </tr>
                     <?php } ?>
                 </tbody>
