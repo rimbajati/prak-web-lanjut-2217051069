@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
     body {
@@ -37,7 +37,6 @@
         margin: 30px auto;
         position: relative;
         background-color: #ddd;
-        border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
@@ -148,11 +147,7 @@
 <body>
     <div class="profile-card">
         <div class="profile-photo">
-            @if ($user->foto)
-                <img src="{{ asset('assets/upload/img/'. $user->foto) }}" alt="Profile Image" class="profile-img img-fluid">
-            @else
-                <img src="{{ asset('assets/img/profile.png') }}" alt="Default Profile Image" class="profile-img img-fluid">
-            @endif
+            <img src="{{ asset('assets/upload/img/' . $user->foto) }}" class="card-img-top" alt="">
         </div>
         
         <div class="info">
